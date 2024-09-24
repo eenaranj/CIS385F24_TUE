@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+    <script>
+        function calculatePerimeter(){
+            console.log("Inside calculatePerimeter function");
+            
+            var side1 = Number(document.getElementById("side1").value);
+            console.log("Side 1 = " + side1);
+
+            var side2 = Number(document.getElementById("side2").value);
+            console.log("Side 2 = " + side2);
+
+            var side3 = Number(document.getElementById("side3").value);
+            console.log("Side 3 = " + side3);
+
+            var perimeter = side1 + side2 + side3;
+
+            document.getElementById("perimeter").value = perimeter;
+
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Find the Perimeter of a triangle</h2>
+
+    <table>
+        <tr>
+            <td>Side 1</td>
+            <td><input type="text" name="side1" id="side1"></td>
+        </tr>
+        <tr>
+            <td>Side 2</td>
+            <td><input type="text" name="side2" id="side2"></td>
+        </tr>
+        <tr>
+            <td>Side 3</td>
+            <td><input type="text" name="side3" id="side3"></td>
+        </tr>
+        <tr>
+            <td>Perimeter</td>
+            <td><input type="text" name="perimeter" id="perimeter"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="Calculate..." onclick="calculatePerimeter()">
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script>
+        function add_numbers() {
+            console.log("Inside function");
+            // variables
+            var num1 = 0;
+            var num2 = 0;
+
+            num1 = Number(document.getElementById("num1").value);
+            num2 = document.getElementById("num2").value;
+
+            // document.getElementById("answer").innerHTML(answer);
+            var result = num1 + num2;
+            document.getElementById("res").value = result;
+
+            var result = num1 + num2;
+            console.log(result);
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>HTML Forms</h1>
+
+    
+    <h2>New Form</h2>
+
+    <table>
+        <tr>
+            <td>Number 1:</td>
+            <td><input type="text" name="num1" id="num1"></td>
+        </tr>
+        <tr>
+            <td>Number 2:</td>
+            <td><input type="text" name="num2" id="num2"></td>
+        </tr>
+        <tr>
+            <td>Answer:</td>
+            <td><input type="text" name="res" id="res"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Add the Numbers" onclick="add_numbers()"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h3>Some links</h3>
+
+    <ul type="none">
+        <li style="margin-bottom: 20px;"><a href="#" class="btn btn-default">Link 1</a><br></li>
+        <li style="margin-bottom: 20px;"><a href="#" class="btn btn-primary">Link 2</a><br></li>
+        <li style="margin-bottom: 20px;"><a href="#" class="btn btn-danger">Link 3</a><br></li>
+        <li style="margin-bottom: 20px;"><a href="#" class="btn btn-warning">Link 4</a><br></li>
+        <li style="margin-bottom: 20px;"><a href="#" class="btn btn-default">Link 5</a></li>
+    </ul>
+
+    <p>I am a paragraph.</p>
+    
+
+    
+
+</body>
+
+</html>
