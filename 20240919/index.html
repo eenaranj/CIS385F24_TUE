@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <script>
+        function add_numbers() {
+            console.log("Inside function");
+            // variables
+            var num1 = 0;
+            var num2 = 10;
+
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+
+            // document.getElementById("answer").innerHTML(answer);
+            var result = num1 + num2;
+            document.getElementById("res").value = result;
+
+            var result = num1 + num2;
+            console.log(result);
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form><br>
+        First name:<br>
+        <input type="text" name="firstname" id="firstname" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" id="lastname" value="Mouse">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    <form action="action_page.php">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <h2>Add Numbers</h2>
+    Number 1: <input type="text" name="num1" id="num1">
+    <br>
+    Number 2: <input type="text" name="num2" id="num2">
+    <br>
+    Answer: <input type="text" name="res" id="res">
+    <br>
+    <input type="button" value="Add the Numbers" onclick="add_numbers()">
+
+    The answer is: <span id="answer"></span>
+
+</body>
+
+</html>
