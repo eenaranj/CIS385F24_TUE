@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("p1").innerHTML = "This is from JS! 123";
+        };
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <p id="p1"></p>
+
+    <p><a href="#" class="btn btn-default">Add to Cart</a></p>
+    <p><a href="#" class="btn btn-primary">Link</a></p>
+    <p><a href="#" class="btn btn-warning">Link</a></p>
+    <p><a href="#" class="btn btn-success">Link</a></p>
+    <p><a href="#" class="btn btn-info">Link</a></p>
+
+    <table>
+        <tr>
+            <td>Item 1</td>
+            <td><input type="text" name="name1" id="name1" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Item 2</td>
+            <td><input type="text" name="name2" id="name2"></td>
+        </tr>
+        <tr>
+            <td>Item 3</td>
+            <td><input type="text" name="name3" id="name3"></td>
+        </tr>
+        <tr>
+            <td>Dropdown 1</td>
+            <td>
+                <select name="drop1" id="drop1">
+                    <option value="NY">New York</option>
+                    <option value="NJ">New Jersey</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Dropdown 2</td>
+            <td>
+                <select name="drop1" id="drop1" class="form-control">
+                    <option value="NY">New York</option>
+                    <option value="NJ">New Jersey</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+
+
+
+</body>
+
+</html>
