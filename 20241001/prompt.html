@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Prompt</h2>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo">Original text.</p>
+    <script>
+        function myFunction() {
+            var txt;
+            var person = prompt("Please enter your name:", "Enter Name");
+            if (person == null || person == "") {
+                txt = "User cancelled the prompt.";
+            } else {
+                txt = "Hello " + person + "! How are you today?";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        var name;                  // string entered by the user
+        var now = new Date();      // current date and time
+        var hour = now.getHours(); // current hour (0-23)
+        // read the name from the prompt box as a string
+        name = window.prompt("Please enter your name");
+        // determine whether it is morning
+        if (hour < 12)
+            document.write("<h1>Good Morning, ");
+        // determine whether the time is PM
+        if (hour >= 12) {
+            // convert to a 12-hour clock
+            hour = hour - 12;
+            // determine whether it is before 6 PM
+            if (hour < 6)
+                document.write("<h1>Good Afternoon, ");
+            // determine whether it is after 6 PM
+            if (hour >= 6)
+                document.write("<h1>Good Evening, ");
+        } // end if
+        document.writeln(name +
+            ", welcome to JavaScript programming!</h1>");
+    </script>
+
+</body>
+
+</html>
