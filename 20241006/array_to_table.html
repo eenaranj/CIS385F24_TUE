@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+
+<body>
+
+    <table border="1" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="products"></tbody>
+    </table>
+
+    <script>
+        var tableRow = "";
+        var ids = [1, 2, 3, 4, 5];
+        var desc = [
+            "DVD 1", // Description for product 1
+            "DVD 2",
+            "DVD 3",
+            "DVD 4",
+            "DVD 5"
+        ];
+        var price = [9.99, 10.99, 20.99, 30.75, 40.80];
+        var image = ["dvd1.jpeg",
+            "dvd2.jpeg",
+            "dvd3.jpeg",
+            "dvd4.jpeg",
+            "dvd5.jpeg"];
+        /*
+        <tr><td>ID</td><td>Desc</td><td>Price</td><td>Image</td></tr>
+        */
+        for (var i = 0; i < ids.length; i++) {
+            tableRow += "<tr><td>" +
+                ids[i] + "</td><td>" +
+                desc[i] + "</td><td>" +
+                price[i] + "</td>" +
+                "<td><img src='images/" + image[i] + "' alt=\"" + desc[i] + " \" width='50px'></td>" +
+                "</tr>";
+        }
+
+        document.getElementById("products").innerHTML = tableRow;
+    </script>
+
+</body>
+
+</html>

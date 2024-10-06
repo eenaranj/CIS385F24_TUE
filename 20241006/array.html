@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+
+    <ol id="list"></ol>
+
+    <ol id="products"></ol>
+
+    <script>
+        var depts = ["CIS", "CS", "GIS"];
+        //            [0]    [1]   [2]
+        var text = "";
+        for (var i = 0; i < depts.length; i++) {
+            text += "<li>" + depts[i] + "</li>";
+        }
+
+        var listRow = "";
+        var ids = [1, 2, 3, 4, 5];
+        var desc = [
+            "Product 1", // Description for product 1
+            "Product 2",
+            "Product 3",
+            "Product 4",
+            "Product 5"
+        ];
+        var price = [9.99, 10.99, 20.99, 30.75, 40.80];
+        /*
+        <li>ID: 1, Product 1, Price: $9.99</li>
+        <li>ID: 2, Product 2, Price: $10.99</li>
+        */
+        for (var i = 0; i < ids.length; i++) {
+            listRow += "<li>ID: " + ids[i] + ", " + desc[i] + ", Price: $" + price[i] + "</li>";
+        }
+        document.getElementById("products").innerHTML = listRow;
+
+
+    </script>
+</body>
+
+</html>
