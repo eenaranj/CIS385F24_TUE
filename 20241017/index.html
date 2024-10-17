@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+
+    <script>
+        window.onload = function () {
+            console.log("Page loaded!");
+            // Create an array of objects
+            var products = [
+                { id: 1, desc: "DVD 1", price: 10 }, // 0
+                { id: 2, desc: "DVD 2", price: 20 }, // 1
+                { id: 3, desc: "DVD 3", price: 30 }, // 2
+                { id: 4, desc: "DVD 4", price: 40 }, // 3
+                { id: 5, desc: "DVD 5", price: 50 }  // 4
+            ];
+
+            // Create a string variable
+            var table_row = "";
+
+            // Loop through the array of objects
+            for (var i = 0; i < products.length; i++) {
+                table_row += "<tr>";
+                table_row += "<td>" + products[i].id + "</td>"; // load id
+                table_row += "<td>" + products[i].desc + "</td>"; // load desc
+                table_row += "<td>" + products[i].price + "</td>"; // load price
+                table_row += "<td><img src='images/dvd" + (i + 1) + ".jpeg' alt='" + products[i].desc + "'></td>"; // load price
+                table_row += "</tr>";
+
+            }
+
+            document.getElementById("products1").innerHTML = table_row; // load to table
+
+
+
+        };
+
+    </script>
+
+</head>
+
+<body>
+
+    <h3>Products Table</h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="products1"></tbody>
+    </table>
+
+</body>
+
+</html>
