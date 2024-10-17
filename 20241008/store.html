@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+
+    <script>
+        window.onload = function () {
+            console.log("Page loaded");
+
+            var prodids = [1, 2, 3, 4, 5];
+            var desc = [
+                "DVD1", // comment 1
+                "DVD2",
+                "DVD3",
+                "DVD4",
+                "DVD5"
+            ];
+            var prices = [100,200,300,400,500];
+            let images = [
+                "dvd1.jpeg",
+                "dvd2.jpeg",
+                "dvd3.jpeg",
+                "dvd4.jpeg",
+                "dvd5.jpeg"
+            ];
+            var tableRow = "";
+            for (var i = 0; i < prodids.length; i++) {
+                tableRow = "<tr>" +
+                    "<td>" + prodids[i] + "</td>" + 
+                    "<td>" + desc[i] + "</td>" + 
+                    "<td>" + prices[i] + "</td>" + 
+                    "<td><img src='images/" + images[i] + "' alt=\"\" width='100px'></td>" + 
+                    "</tr>";
+                document.getElementById("prod_table").innerHTML += tableRow;
+            }
+            //document.getElementById("prod_table").innerHTML += tableRow;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>My Products</h3>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="prod_table"></tbody>
+    </table>
+
+    <div id="products2"></div>
+
+    <script>
+        // Array of objects
+        var products = [
+            {id:1, description:"DVD1",price:100,image:"dvd1.jpeg"},//0
+            {id:2, description:"DVD2",price:200,image:"dvd2.jpeg"},//1
+            {id:3, description:"DVD3",price:300,image:"dvd3.jpeg"},
+            {id:4, description:"DVD4",price:400,image:"dvd4.jpeg"},
+            {id:5, description:"DVD5",price:500,image:"dvd5.jpeg"}
+        ];
+
+        //products[i].id
+
+        for(var i =0; i < products.length; i++){
+            document.getElementById("products2").innerHTML += 
+            products[i].id + "<br>";
+        }
+
+    </script>
+
+</body>
+
+</html>

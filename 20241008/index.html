@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <script>
+        // first way of calling
+        // function init(){
+        //     var x = ["A", "B", "C"];
+        //     for (var i = 0; i < x.length; i++) {
+        //         document.getElementById("result").innerHTML += x[i] + "<br>";
+        //     }
+        // }
+
+        //window.onload = init;
+
+        // second way of calling JS code
+        // Anonymous function
+        window.onload = function(){ // window.onload = () =>{};
+            var x = ["A", "B", "C"];
+            for (var i = 0; i < x.length; i++) {
+                document.getElementById("result").innerHTML += x[i] + "<br>";
+            }
+        }
+
+      
+    </script>
+
+</head>
+
+<body>
+
+    <div id="result"></div>
+
+
+</body>
+
+</html>
