@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Cookies</title>
+
+    <script>
+        // Create two cookies
+        document.cookie = "name1=value1";
+        document.cookie = "name2=value2";
+        // Load all cookies into variable allcookies
+        var allcookies = document.cookie;
+        // Show cookies on console
+        console.log("All Cookies: " + allcookies);
+
+        // Separate cookies into an array vaiable
+        var cookie_array = allcookies.split(";");
+        console.log(cookie_array);
+
+        // Get the name and value of the second cookie
+        var second_cookie = cookie_array[1];
+        console.log("Second cookie: " + second_cookie);
+
+        var name = second_cookie.split("=")[0];
+        var value = second_cookie.split("=")[1];
+
+        console.log("Cookie 2 name = " + name);
+        console.log("Cookie 2 value = " + value);
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
