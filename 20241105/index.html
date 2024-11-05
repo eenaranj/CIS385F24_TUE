@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="people_table"></tbody>
+        </table>
+
+    </div>
+
+    <script>
+        var myarray = [
+            { id: 1, name: "John", age: 30 },
+            { id: 2, name: "Mary", age: 25 },
+            { id: 3, name: "Peter", age: 28 }
+        ];
+
+        var table_row = "";
+
+        for (var i = 0; i < myarray.length; i++) {
+            // table_row += "<tr>";
+            // table_row += "<td>" + myarray[i].id + "</td>";
+            // table_row += "<td>" + myarray[i].name + "</td>";
+            // table_row += "<td>" + myarray[i].age + "</td>";
+            // table_row += "</tr>";
+
+            table_row += `<tr>
+                <td>${myarray[i].id}</td>
+                <td>${myarray[i].name}</td>
+                <td>${myarray[i].age}</td>
+            </tr>`;
+        }
+
+        document.getElementById("people_table").innerHTML = table_row;
+
+
+    </script>
+
+
+</body>
+
+</html>
