@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky footer</title>
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #323a45;
+            color: white;
+            text-align: center;
+            margin: auto;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>This is my page content</h3>
+
+    <div class="footer">
+        &copy; <span id="year"></span> Company/Developer Name
+    </div>
+
+    <script>
+        const today = new Date();
+        const year = today.getFullYear();
+        document.getElementById("year").textContent = year;
+    </script>
+
+</body>
+
+</html>
